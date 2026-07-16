@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace CarRentalApp.Models;
+
+public partial class CarRentalRecord
+{
+    public int Id { get; set; }
+
+    public string? CustomerName { get; set; }
+
+    public DateTime? DateRented { get; set; }
+
+    public DateTime? DateReturned { get; set; }
+
+    public decimal? Cost { get; set; }
+
+    public int? TypeOfCar { get; set; }
+
+    public virtual TypesOfCar? TypeOfCarNavigation { get; set; }
+}
