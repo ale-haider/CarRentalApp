@@ -12,6 +12,9 @@ namespace CarRentalApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new MainWindow());
+
+            //when want to launch login page if implemented correctly
+            //Application.Run(new Login());
         }
     }
 }

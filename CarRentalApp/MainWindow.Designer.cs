@@ -74,20 +74,21 @@
             // addRentalRecordsToolStripMenuItem
             // 
             addRentalRecordsToolStripMenuItem.Name = "addRentalRecordsToolStripMenuItem";
-            addRentalRecordsToolStripMenuItem.Size = new Size(177, 22);
+            addRentalRecordsToolStripMenuItem.Size = new Size(180, 22);
             addRentalRecordsToolStripMenuItem.Text = "Add Rental Records";
             addRentalRecordsToolStripMenuItem.Click += addRentalRecordsToolStripMenuItem_Click;
             // 
             // viewArchiceToolStripMenuItem
             // 
             viewArchiceToolStripMenuItem.Name = "viewArchiceToolStripMenuItem";
-            viewArchiceToolStripMenuItem.Size = new Size(177, 22);
+            viewArchiceToolStripMenuItem.Size = new Size(180, 22);
             viewArchiceToolStripMenuItem.Text = "View Archice";
+            viewArchiceToolStripMenuItem.Click += viewArchiceToolStripMenuItem_Click;
             // 
             // editRentalRecordToolStripMenuItem
             // 
             editRentalRecordToolStripMenuItem.Name = "editRentalRecordToolStripMenuItem";
-            editRentalRecordToolStripMenuItem.Size = new Size(177, 22);
+            editRentalRecordToolStripMenuItem.Size = new Size(180, 22);
             editRentalRecordToolStripMenuItem.Text = "Edit Rental Record";
             // 
             // MainWindow

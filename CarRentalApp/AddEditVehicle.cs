@@ -12,11 +12,11 @@ namespace CarRentalApp
     public partial class AddEditVehicle : Form
     {
         private bool isEditMode;
-        private readonly CarRentalContext _db = new CarRentalContext();
+        private  CarRentalContext _db = new CarRentalContext();
         public AddEditVehicle()
         {
             InitializeComponent();
-            lblTitle.Text = "Add New Vehicle";
+            lblTitle.Text = "Edit Vehicle";
             isEditMode = false;
             _db = new CarRentalContext();
         }
@@ -49,14 +49,21 @@ namespace CarRentalApp
             if (isEditMode)
             {
                 var id = int.Parse(lblId.Text);
+
+
+
                 var car = _db.TypesOfCars.FirstOrDefault(q => q.Id == id);
 
-                car.Model = tbModel.Text;
-                car.Make = tbMake.Text;
-                car.Vin = tbVin.Text;
-                car.Year = int.Parse(tbYear.Text);
-                car.LicensePlateNumber = tbLicenseNum.Text;
+                if (car != null) 
+                {
+                    car.Model = tbModel.Text;
+                    car.Make = tbMake.Text;
+                    car.Vin = tbVin.Text;
+                    car.Year = int.Parse(tbYear.Text);
+                    car.LicensePlateNumber = tbLicenseNum.Text;
 
+                    _db.SaveChanges();
+                }
                 _db.SaveChanges();
             }
             else
@@ -67,7 +74,7 @@ namespace CarRentalApp
                     Make = tbMake.Text,
                     Model = tbModel.Text,
                     Vin = tbVin.Text,
-                    Year = int.Parse(tbYear.Text);
+                    Year = int.Parse(tbYear.Text)
                 };
 
                 _db.TypesOfCars.Add(newCar);
