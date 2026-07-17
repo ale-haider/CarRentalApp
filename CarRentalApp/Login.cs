@@ -14,7 +14,7 @@ namespace CarRentalApp
         {
             InitializeComponent();
         }
-
+        //adding login functionality
         private void Login_Load(object sender, EventArgs e)
         {
 
