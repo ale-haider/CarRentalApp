@@ -107,7 +107,7 @@ public partial class CarRentalContext : DbContext
         });
 
         OnModelCreatingPartial(modelBuilder);
-    }
-
+    } 
+     
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
