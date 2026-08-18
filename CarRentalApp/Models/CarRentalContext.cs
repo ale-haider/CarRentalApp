@@ -26,8 +26,11 @@ public partial class CarRentalContext : DbContext
     public virtual DbSet<UserRole> UserRoles { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-NNMSVH6\\SQLEXPRESS;Database=CarRental;Integrated Security=True;TrustServerCertificate=True;");
+<connectionStrings>
+  <add name="CarRentalEntities" 
+       connectionString="metadata=res://*/...;provider=System.Data.SqlClient;provider connection string=&quot;data source=YOUR_SERVER_NAME;initial catalog=CarRentalDb;integrated security=True;MultipleActiveResultSets=True;&quot;" 
+       providerName="System.Data.EntityClient" />
+</connectionStrings>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
